@@ -19,9 +19,8 @@ public class FlatAList {
 		lsOfList.add(ls3);
 		System.out.println(lsOfList);
 		
-		List<Integer> flatResult = lsOfList.stream().flatMap(i -> i.stream()).collect(Collectors.toList());
-		System.out.println(flatResult);
-
+		List<Integer> flatLs = lsOfList.stream().flatMap(i -> i.stream()).collect(Collectors.toList());
+		System.out.println(flatLs);
 	}
 
 }

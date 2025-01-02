@@ -27,7 +27,14 @@ public class CountOfWordsInString {
 		Map<String, Long> wordFrequency = Arrays.stream(str.split(" "))
 		        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 		System.out.println("Word frequency: " + wordFrequency);
+		
+		String[] st = {"Hello","Java","World","Hello","Java"};
+		
+		Map<String,Long> sty = Arrays.stream(st).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		System.out.println(sty);
 
+		Map<Character,Long> countOfChars = str.replace(" ", "").chars().mapToObj(i ->(char) i).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		System.out.println(countOfChars);
 	}
 
 }
